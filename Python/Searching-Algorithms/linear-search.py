@@ -1,16 +1,24 @@
 #Linear Search Program
-def linear_search(l,key):
-  for i in l:
-    if i==key:
-      return i
-  return -1
-l=[1,5,2,7,3]
-k=2
-f=linear_search(l,k)
-if f!=-1:
-  print("Key element is at %d index"%f)
-else:
-  print("Element not found")
-#if k=(any number which is not in the list)
-#Output: Element not found
-#Otherwise it prints "Key element is at {index of that element in list} index"
+def linear_search(list, target):
+    """
+    Returns the index position of the target if found, else returns None
+    """
+    for i in range(0, len(list)):
+        if list[i] == target:
+            return i
+    return None
+
+def verify(index):
+    if index is not None:
+        print("Target found at index: ", index)
+    else:
+        print("Target not found in the list")
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+result = linear_search(numbers, 12)
+verify(result)
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+result = linear_search(numbers, 6)
+verify(result)
+
