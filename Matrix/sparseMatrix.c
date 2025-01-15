@@ -53,12 +53,5 @@ int main()
     }else{
     printf("\nNot a sparse matrix");
     }
-
-
-
-
-
-
-
     return 0;
 }
